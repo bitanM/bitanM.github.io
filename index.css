@@ -76,6 +76,84 @@ p {
 }
 
 
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.skill {
+    width: calc(33.33% - 20px);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.certificates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.certificate {
+    width: calc(33.33% - 20px);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.certificate h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.certificate p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Styles remain the same */
+.resume-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: dimgrey;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.resume-link:hover {
+    background-color: #e63a00;
+}
+
 @media screen and (max-width: 768px) {
     nav ul {
         flex-direction: column;
