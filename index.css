@@ -44,20 +44,16 @@ nav ul li a:hover {
     padding: 0 2rem;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
+
+h1 {
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
+
 .rectangle {
   height: 531px;
   width: 413px;
   background-color: #555;
-}
-h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
 }
 
 p {
