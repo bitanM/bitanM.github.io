@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Learning tool</title>
+    <meta charset="UTF-8">
+    <style>
+        table { border-collapse: collapse; }
+        td, th { border: 1px solid #ccc; padding: 10px 18px; text-align: center; }
+    </style>
+</head>
+<body>
+    <center><h1>HTML Learning tool</h1></center>
+    <center><h4>To use any of the following HTML tags, press the execute button on the right hand side.</h4></center>
+    <center>
+    <table>
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+                <th>Execute</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;h1&gt;</td>
+                <td>Header</td>
+                <td><button type="button" onclick="executeSnippet(0)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;b&gt;</td>
+                <td>Bold</td>
+                <td><button type="button" onclick="executeSnippet(1)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;big&gt;</td>
+                <td>Big(text)</td>
+                <td><button type="button" onclick="executeSnippet(2)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;body&gt;</td>
+                <td>Body</td>
+                <td><button type="button" onclick="executeSnippet(3)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;br&gt;</td>
+                <td>Break</td>
+                <td><button type="button" onclick="executeSnippet(4)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;center&gt;</td>
+                <td>Center</td>
+                <td><button type="button" onclick="executeSnippet(5)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;dd&gt;</td>
+                <td>Description</td>
+                <td><button type="button" onclick="executeSnippet(6)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;dl&gt;</td>
+                <td>Definition list</td>
+                <td><button type="button" onclick="executeSnippet(7)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;dt&gt;</td>
+                <td>Definition Term</td>
+                <td><button type="button" onclick="executeSnippet(8)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;em&gt;</td>
+                <td>Emphasis Term</td>
+                <td><button type="button" onclick="executeSnippet(9)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;embed&gt;</td>
+                <td>Embed object</td>
+                <td><button type="button" onclick="executeSnippet(10)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;font&gt;</td>
+                <td>Font</td>
+                <td><button type="button" onclick="executeSnippet(11)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;form&gt;</td>
+                <td>Form</td>
+                <td><button type="button" onclick="executeSnippet(12)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;head&gt;</td>
+                <td>Head</td>
+                <td><button type="button" onclick="executeSnippet(13)">Execute</button></td>
+            </tr>
+             <tr>
+                <td>&lt;hr&gt;</td>
+                <td>Horizontal Rule</td>
+                <td><button type="button" onclick="executeSnippet(14)">Execute</button></td>
+            </tr>
+             <tr>
+                <td>&lt;html&gt;</td>
+                <td>HTML tag</td>
+                <td><button type="button" onclick="executeSnippet(15)">Execute</button></td>
+            </tr>
+             <tr>
+                <td>&lt;i&gt;</td>
+                <td>Italic</td>
+                <td><button type="button" onclick="executeSnippet(16)">Execute</button></td>
+            </tr>   
+            <tr>
+                <td>&lt;img&gt;</td>
+                <td>Image</td>
+                <td><button type="button" onclick="executeSnippet(17)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>Input</td>
+                <td><button type="button" onclick="executeSnippet(18)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;li&gt;</td>
+                <td>List</td>
+                <td><button type="button" onclick="executeSnippet(19)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;link&gt;</td>
+                <td>Link</td>
+                <td><button type="button" onclick="executeSnippet(20)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;marquee&gt;</td>
+                <td>Marquee</td>
+                <td><button type="button" onclick="executeSnippet(21)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;menu&gt;</td>
+                <td>Menu</td>
+                <td><button type="button" onclick="executeSnippet(22)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;meta&gt;</td>
+                <td>Meta</td>
+                <td><button type="button" onclick="executeSnippet(23)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;ol&gt;</td>
+                <td>Ordered List</td>
+                <td><button type="button" onclick="executeSnippet(24)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;option&gt;</td>
+                <td>Listbox Option</td>
+                <td><button type="button" onclick="executeSnippet(25)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;p&gt;</td>
+                <td>Paragraph</td>
+                <td><button type="button" onclick="executeSnippet(26)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;small&gt;</td>
+                <td>Small</td>
+                <td><button type="button" onclick="executeSnippet(27)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;strike&gt;</td>
+                <td>Deleted Text</td>
+                <td><button type="button" onclick="executeSnippet(28)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;strong&gt;</td>
+                <td>Strong Emphasis</td>
+                <td><button type="button" onclick="executeSnippet(29)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;table&gt;</td>
+                <td>Table</td>
+                <td><button type="button" onclick="executeSnippet(30)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;td&gt;</td>
+                <td>Table Data</td>
+                <td><button type="button" onclick="executeSnippet(31)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;th&gt;</td>
+                <td>Table Header</td>
+                <td><button type="button" onclick="executeSnippet(32)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;title&gt;</td>
+                <td>Document Title</td>
+                <td><button type="button" onclick="executeSnippet(33)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;tr&gt;</td>
+                <td>Table Row</td>
+                <td><button type="button" onclick="executeSnippet(34)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;tt&gt;</td>
+                <td>Teletype</td>
+                <td><button type="button" onclick="executeSnippet(35)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;u&gt;</td>
+                <td>Underline</td>
+                <td><button type="button" onclick="executeSnippet(36)">Execute</button></td>
+            </tr>
+            <tr>
+                <td>&lt;ul&gt;</td>
+                <td>Unordered list</td>
+                <td><button type="button" onclick="executeSnippet(37)">Execute</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+    </center>
+    <script>
+        const snippets = [
+            '<h1>HTML Learning tool</h1>',
+            '<b>HTML Learning tool</b>',
+            '<big>HTML Learning tool</big>',
+            '<body>The content of your HTML page</body>',
+            'The contents of the page <br> will break here',
+            '<center> HTML Learning tool</center>',
+            '<dl><dt>Definition Term</dt><b><dd>Definition of the term</dd></b><dt>Definition Term</dt><b><dd>Definition of the term</dd></b></dl>',
+            '<b><dl><b><dt>Definition Term</dt><dd>Definition of the term</dd><dt>Definition Term</dt><dd>Definition of the term</dd><b></dl></b>',
+            '<dl><dt>Definition Term</dt><dd>Definition of the term</dd><dt>Definition Term</dt><dd>Definition of the term</dd></dl>',
+            '<em>HTML Learning tool</em>',
+            '<embed src="yourfile.mid" width="100%" height="60" align="center">',
+            '<font face="Times New Roman" size="3">HTML Learning tool</font>',
+            '<form action="mailto:you@yourdomain.com">Name:<input name="Name" value="" size="10"><br>Email:<input name="Email" value="" size="10">',
+            '<head>Contains elements describing the document</head>',
+            '<hr>',
+            '<html><head><meta><title>Title of your web page</title></head><body>HTML web page contents</body></html>',
+            '<i>Example</i>',
+            '<img src="image.gif" />',
+            '<form method=post action="/cgibin/example.cgi"><input type="text" size="10"maxlength="30"><input type="Submit" value="Submit"></form>',
+            '<menu><li type="disc">List item 1</li><li type="circle">List item 2</li><li type="square">List item 3</li></menu>',
+            '<head><link rel="stylesheet" type="text/css"href="style.css" /></head>',
+            '<marquee bgcolor="#cccccc" loop="-1"scrollamount="2" width="100%">ExampleMarquee</marquee>',
+            '<menu><li type="disc">List item 1</li><li type="circle">List item 2</li><li type="square">List item 3</li></menu>',
+            '<meta name="Description"content="Description of your site"><meta name="keywords"content="keywords describing your site">',
+            '<ol><li>List item 1</li><li>List item 2</li><li>List item 3</li><li>List item 4</li></ol>',
+            '<form method=post action="/cgibin/example.cgi"><center>Select an option:<select><option>option 1</option><option selected>option 2</option><option>option 3</option><option>option 4</option><option>option 5</option><option>option 6</option></select><br></center></form>',
+            'This is an example displaying the use of the paragraph tag. <p> This will create a line break and a space between lines. Attributes: Example 1:<br> <br> <p align="left">This is an example<br> displaying the use<br> of the paragraph tag.<br> <br> Example 2:<br> <br> <p align="right"> This is an example<br> displaying the use<br> of the paragraph tag.<br> <br> Example 3:<br><br><p align="center">This is an example<br>displaying the use<br>of the paragraph tag.',
+            '<small>Example</small>',
+            '<strike>Example</strike>',
+            '<strong>Example</strong>',
+            'Example 1:<table border="4" cellpadding="2"cellspacing="2" width="100%"><tr><td>Column 1</td><td>Column 2</td></tr></table>Example 2: (Internet Explorer)<table border="2" bordercolor="#336699"cellpadding="2" cellspacing="2"width="100%"><tr><td>Column 1</td><td>Column 2</td></tr></table>Example 3:<table cellpadding="2" cellspacing="2"width="100%"><tr><td bgcolor="#cccccc">Column 1</td><td bgcolor="#cccccc">Column 2</td></tr><tr><td>Row 2</td><td>Row 2</td></tr></table>',
+            '<table border="2" cellpadding="2"cellspacing="2" width="100%"><tr><td>Column 1</td><td>Column 2</td></tr></table>',
+            '<div align="center"><table><tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr><tr><td>Row 2</td><td>Row 2</td><td>Row 2</td></tr><tr><td>Row 3</td><td>Row 3</td><td>Row 3</td></tr><tr><td>Row 4</td><td>Row 4</td><td>Row 4</td></tr></table></div>',
+            '<title>Title of your HTML page</title>',
+            '<table border="2" cellpadding="2"cellspacing="2" width="100%"><tr><td>Column 1</td><td>Column 2</td></tr></table>',
+            '<tt>Example</tt>',
+            '<u>Example</u>',
+            'Example 1:<br><br><ul><li>List item 1</li><li>List item 2</li></ul><br>Example 2:<br><ul type="disc"><li>List item 1</li><li>List item 2</li><ul type="circle"><li>List item 3</li><li>List item 4</li></ul></ul>',
+
+        ];
+
+        function executeSnippet(index){
+            const code = snippets[index];
+            const win = window.open('', '_blank');
+            win.document.write(`
+                <html>
+                <head>
+                    <title>Snippet Output</title>
+                    <style>body{font-size:1.2em;font-family:sans-serif;}</style>
+                </head>
+                <body>
+                    <h3>Output:</h3>
+                    <div>${code}</div>
+                    <hr>
+                    <h4>Source code:</h4>
+                    <pre>${code.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>
+                </body>
+                </html>
+            `);
+            win.document.close();
+        }
+    </script>
+</body>
+</html>
