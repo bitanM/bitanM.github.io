@@ -5,11 +5,19 @@ body {
     background-color: #f0f0f0;
 }
 .dark-mode{
+
 	background-color: black;
 	color: white;
 }
 header {
     background-color: #333;
+
+	background-color: lightslategray;
+	color: white;
+}
+header {
+    background-color: lightgray;
+
     color: white;
     padding: 1rem;
 }
@@ -49,8 +57,15 @@ nav ul li a:hover {
 
 
 h1 {
+
     font-size: 2rem;
     margin-bottom: 1rem;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: rgba(247, 244, 244, 0.796);
+
 }
 
 .rectangle {
@@ -61,12 +76,22 @@ h1 {
 
 p {
     font-size: 1rem;
+
     color: #999999;
     line-height: 1.6;
 }
 
 .internship {
     background-color: black;
+
+    color: black;
+    line-height: 1.6;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.internship {
+    background-color: lightgray;
+
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
