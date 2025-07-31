@@ -268,11 +268,11 @@
                     <style>body{font-size:1.2em;font-family:sans-serif;}</style>
                 </head>
                 <body>
-                    <h3>Output:</h3>
-                    <div>${code}</div>
-                    <hr>
                     <h4>Source code:</h4>
                     <pre>${code.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>
+                    <hr>
+                    <h3>Output:</h3>
+                    <div>${code}</div>
                 </body>
                 </html>
             `);
