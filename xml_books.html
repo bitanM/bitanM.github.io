@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Book Information Display</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .xml-display {
+            padding: 30px;
+        }
+        .xml-source {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+        }
+        .xml-source h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .xml-code {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            white-space: pre;
+        }
+        .books-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .book {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .book:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        .book-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .book-author {
+            font-size: 1.1em;
+            color: #e74c3c;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        .book-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .info-item {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #34495e;
+            font-size: 0.9em;
+        }
+        .info-value {
+            color: #2c3e50;
+            margin-top: 2px;
+        }
+        .book-description {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+            margin-top: 15px;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #27ae60;
+        }
+        .rating {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        .availability {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-align: center;
+        }
+        .in-stock {
+            background: #d4edda;
+            color: #155724;
+        }
+        .limited-stock {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .out-of-stock {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .stats {
+            background: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav-buttons button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        .nav-buttons button:hover {
+            background: #2980b9;
+        }
+        .nav-buttons button.active {
+            background: #27ae60;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .books-display {
+                grid-template-columns: 1fr;
+            }
+            .book-info {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 XML Book Information Display</h1>
+            <p>A comprehensive XML-based book catalog system</p>
+        </div>
+        
+        <div class="xml-display">
+            <div class="nav-buttons">
+                <button onclick="showSection('xml')" id="xmlBtn" class="active">View XML Source</button>
+                <button onclick="showSection('display')" id="displayBtn">View Formatted Display</button>
+                <button onclick="showSection('both')" id="bothBtn">View Both</button>
+            </div>
+            
+            <div id="xmlSection" class="section active">
+                <div class="xml-source">
+                    <h3>📄 XML Source Code</h3>
+                    <p>Below is the raw XML structure containing book information:</p>
+                    <div class="xml-code" id="xmlContent"></div>
+                </div>
+            </div>
+            
+            <div id="displaySection" class="section">
+                <div class="stats">
+                    <p><strong>Total Books: </strong><span id="bookCount">0</span></p>
+                </div>
+                <div class="books-display" id="booksContainer"></div>
+            </div>
+            
+            <div id="bothSection" class="section">
+                <div class="xml-source">
+                    <h3>📄 XML Source Code</h3>
+                    <div class="xml-code" id="xmlContentBoth"></div>
+                </div>
+                <div class="stats">
+                    <p><strong>Total Books: </strong><span id="bookCountBoth">0</span></p>
+                </div>
+                <div class="books-display" id="booksContainerBoth"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadXMLData() {
+            try {
+                const response = await fetch('books.xml');
+                const xmlText = await response.text();
+                
+                // Display XML source
+                document.getElementById('xmlContent').textContent = xmlText;
+                document.getElementById('xmlContentBoth').textContent = xmlText;
+                
+                // Parse XML
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                const books = xmlDoc.getElementsByTagName('book');
+                
+                // Update book count
+                document.getElementById('bookCount').textContent = books.length;
+                document.getElementById('bookCountBoth').textContent = books.length;
+                
+                // Generate HTML for books
+                const booksHTML = generateBooksHTML(books);
+                document.getElementById('booksContainer').innerHTML = booksHTML;
+                document.getElementById('booksContainerBoth').innerHTML = booksHTML;
+                
+            } catch (error) {
+                console.error('Error loading XML:', error);
+                // Fallback data if XML file is not accessible
+                loadFallbackData();
+            }
+        }
+        
+        function generateBooksHTML(books) {
+            let html = '';
+            for (let i = 0; i < books.length; i++) {
+                const book = books[i];
+                const getElementText = (tagName) => {
+                    const element = book.getElementsByTagName(tagName)[0];
+                    return element ? element.textContent : 'N/A';
+                };
+                
+                const availability = getElementText('availability');
+                let availabilityClass = 'out-of-stock';
+                if (availability === 'In Stock') availabilityClass = 'in-stock';
+                else if (availability === 'Limited Stock') availabilityClass = 'limited-stock';
+                
+                html += `
+                    <div class="book">
+                        <div class="book-title">${getElementText('title')}</div>
+                        <div class="book-author">by ${getElementText('author')}</div>
+                        
+                        <div class="book-info">
+                            <div class="info-item">
+                                <div class="info-label">ISBN</div>
+                                <div class="info-value">${getElementText('isbn')}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Publication Date</div>
+                                <div class="info-value">${getElementText('publication_date')}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Publisher</div>
+                                <div class="info-value">${getElementText('publisher')}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Genre</div>
+                                <div class="info-value">${getElementText('genre')}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Pages</div>
+                                <div class="info-value">${getElementText('pages')} pages</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Language</div>
+                                <div class="info-value">${getElementText('language')}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Price</div>
+                                <div class="info-value price">$${getElementText('price')}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Rating</div>
+                                <div class="info-value rating">⭐ ${getElementText('rating')}/5</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-label">Availability</div>
+                            <div class="info-value">
+                                <span class="availability ${availabilityClass}">${availability}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="book-description">
+                            <strong>Description:</strong><br/>
+                            ${getElementText('description')}
+                        </div>
+                    </div>
+                `;
+            }
+            return html;
+        }
+        
+        function loadFallbackData() {
+            const fallbackXML = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+<library>
+    <book id="1">
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <isbn>978-0-7432-7356-5</isbn>
+        <publication_date>1925-04-10</publication_date>
+        <publisher>Charles Scribner's Sons</publisher>
+        <genre>Classic Literature</genre>
+        <pages>180</pages>
+        <language>English</language>
+        <price currency="USD">12.99</price>
+        <availability>In Stock</availability>
+        <rating>4.5</rating>
+        <description>A classic American novel set in the Jazz Age.</description>
+    </book>
+</library>`;
+            
+            document.getElementById('xmlContent').textContent = fallbackXML;
+            document.getElementById('xmlContentBoth').textContent = fallbackXML;
+            
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(fallbackXML, 'text/xml');
+            const books = xmlDoc.getElementsByTagName('book');
+            
+            document.getElementById('bookCount').textContent = books.length;
+            document.getElementById('bookCountBoth').textContent = books.length;
+            
+            const booksHTML = generateBooksHTML(books);
+            document.getElementById('booksContainer').innerHTML = booksHTML;
+            document.getElementById('booksContainerBoth').innerHTML = booksHTML;
+        }
+        
+        function showSection(section) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-buttons button').forEach(b => b.classList.remove('active'));
+            
+            // Show selected section
+            if (section === 'xml') {
+                document.getElementById('xmlSection').classList.add('active');
+                document.getElementById('xmlBtn').classList.add('active');
+            } else if (section === 'display') {
+                document.getElementById('displaySection').classList.add('active');
+                document.getElementById('displayBtn').classList.add('active');
+            } else if (section === 'both') {
+                document.getElementById('bothSection').classList.add('active');
+                document.getElementById('bothBtn').classList.add('active');
+            }
+        }
+        
+        // Load XML data when page loads
+        document.addEventListener('DOMContentLoaded', loadXMLData);
+    </script>
+</body>
+</html>
