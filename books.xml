@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+<library>
+    <book id="1">
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <isbn>978-0-7432-7356-5</isbn>
+        <publication_date>1925-04-10</publication_date>
+        <publisher>Charles Scribner's Sons</publisher>
+        <genre>Classic Literature</genre>
+        <pages>180</pages>
+        <language>English</language>
+        <price currency="USD">12.99</price>
+        <availability>In Stock</availability>
+        <rating>4.5</rating>
+        <description>A classic American novel set in the Jazz Age, exploring themes of wealth, love, idealism, and moral decay in the American Dream.</description>
+        <cover_image>https://images.example.com/great-gatsby.jpg</cover_image>
+    </book>
+    
+    <book id="2">
+        <title>To Kill a Mockingbird</title>
+        <author>Harper Lee</author>
+        <isbn>978-0-06-112008-4</isbn>
+        <publication_date>1960-07-11</publication_date>
+        <publisher>J.B. Lippincott &amp; Co.</publisher>
+        <genre>Classic Literature</genre>
+        <pages>281</pages>
+        <language>English</language>
+        <price currency="USD">13.99</price>
+        <availability>In Stock</availability>
+        <rating>4.8</rating>
+        <description>A gripping tale of racial injustice and childhood innocence in the American South during the 1930s.</description>
+        <cover_image>https://images.example.com/mockingbird.jpg</cover_image>
+    </book>
+    
+    <book id="3">
+        <title>1984</title>
+        <author>George Orwell</author>
+        <isbn>978-0-452-28423-4</isbn>
+        <publication_date>1949-06-08</publication_date>
+        <publisher>Secker &amp; Warburg</publisher>
+        <genre>Dystopian Fiction</genre>
+        <pages>328</pages>
+        <language>English</language>
+        <price currency="USD">14.99</price>
+        <availability>In Stock</availability>
+        <rating>4.7</rating>
+        <description>A dystopian social science fiction novel about totalitarian control, surveillance, and the nature of reality.</description>
+        <cover_image>https://images.example.com/1984.jpg</cover_image>
+    </book>
+    
+    <book id="4">
+        <title>Pride and Prejudice</title>
+        <author>Jane Austen</author>
+        <isbn>978-0-14-143951-8</isbn>
+        <publication_date>1813-01-28</publication_date>
+        <publisher>T. Egerton</publisher>
+        <genre>Romance</genre>
+        <pages>432</pages>
+        <language>English</language>
+        <price currency="USD">11.99</price>
+        <availability>In Stock</availability>
+        <rating>4.6</rating>
+        <description>A romantic novel about manners, upbringing, morality, education, and marriage in British landed gentry society.</description>
+        <cover_image>https://images.example.com/pride-prejudice.jpg</cover_image>
+    </book>
+    
+    <book id="5">
+        <title>The Catcher in the Rye</title>
+        <author>J.D. Salinger</author>
+        <isbn>978-0-316-76948-0</isbn>
+        <publication_date>1951-07-16</publication_date>
+        <publisher>Little, Brown and Company</publisher>
+        <genre>Coming-of-age Fiction</genre>
+        <pages>277</pages>
+        <language>English</language>
+        <price currency="USD">13.50</price>
+        <availability>Limited Stock</availability>
+        <rating>4.3</rating>
+        <description>A controversial novel narrating the experiences of a teenager in New York City after being expelled from prep school.</description>
+        <cover_image>https://images.example.com/catcher-rye.jpg</cover_image>
+    </book>
+    
+    <book id="6">
+        <title>Harry Potter and the Sorcerer's Stone</title>
+        <author>J.K. Rowling</author>
+        <isbn>978-0-439-70818-8</isbn>
+        <publication_date>1997-06-26</publication_date>
+        <publisher>Bloomsbury</publisher>
+        <genre>Fantasy</genre>
+        <pages>309</pages>
+        <language>English</language>
+        <price currency="USD">8.99</price>
+        <availability>In Stock</availability>
+        <rating>4.9</rating>
+        <description>The first book in the Harry Potter series, following a young wizard's journey at Hogwarts School of Witchcraft and Wizardry.</description>
+        <cover_image>https://images.example.com/harry-potter-1.jpg</cover_image>
+    </book>
+</library>
