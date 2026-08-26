@@ -3,148 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Bitan Majumder</title>
+    <title>Bitan Majumder - Portfolio</title>
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --text-color: #333;
+            --header-color: #555;
+            --bg-color: #fff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Main Name Header */
+        h1.main-title {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            margin-top: 0;
+            color: #000;
+        }
+
+        a {
+            color: #525252;
+            text-decoration: underline; 
+        }
+
+        /* Section Headers */
+        h2 {
+            color: var(--header-color);
+            font-weight: 400;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 5px;
+            color: #222;
+        }
+
+        /* Layout Grid for Top Section */
+        .top-section {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .profile-photo {
+            flex: 0 0 35%; /* Takes up roughly 35% of width */
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .bio-content {
+            flex: 1;
+        }
+
+        .bio-content h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .bio-text {
+            text-align: justify;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .research-interest {
+            text-align: center;
+        }
+
+        /* Experience & Projects Styling */
+        .section-block {
+            margin-bottom: 30px;
+        }
+
+        .entry {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .entry strong {
+            font-weight: 700;
+        }
+
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        /* Italics for institutions/names */
+        em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        /* Footer Icons */
+        .footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            font-size: 2.5rem;
+        }
+
+        .fa-envelope { color: #DB4437; } /* Gmail Red */
+        .fa-github { color: #333; }      /* Github Black */
+        .fa-linkedin { color: #0077b5; } /* Linkedin Blue */
+        .fa-file-pdf { color: #E02424; }  /* PDF Red */
+
+        /* Responsive Design for mobile */
+        @media (max-width: 768px) {
+            .top-section {
+                flex-direction: column;
+            }
+            .profile-photo {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
-<body class="dark-mode">
-	<h1 style="color: rgb(3, 72, 44); text-align: center; font-family: 'Times New Roman' ;">Bitan Majumder</h1>
-	<header>
-        <nav>
-            <ul>
-                <li><a style="color: rgb(3, 72, 44)" href="#about">About</a></li>
-                <li><a style="color: rgb(3, 72, 44)"href="#education">Education</a></li>
-                <li><a style="color: rgb(3, 72, 44)"href="#experiences">Experiences</a></li>
-                <li><a style="color: rgb(3, 72, 44)"href="#assignments">Assignment</a></li>
-                <li><a style="color: rgb(3, 72, 44)"href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about" class="section">
-        <div class="container">
-            <img class="rectangle" src="logo\image.jpg" alt="Your Name">
-            <h1>About Me</h1>
-		<p style="color: rgb(3, 72, 44);font-size:24px">Graduate student of Computer Science</p>
-            <p style="color:black;font-size:18px">As a student of Computer Science masters, I have a passion for the field of Natural Language Processing and Deep Learning. This new emerging field has attracted me by its potential of transforming the future world and I have a desire to be a part of this change. I have  worked on different personal projects and a few Internships to gain the practical knowledge.</p>
-        </div>
-    </section>
-    
-    <section id="education" class="section">
-        <div class="container">
-            <h1>Education</h1>
-            <h2><a style="text-decoration: none; color: rgb(3, 72, 44);" href="https://www.google.com/search?q=pondicherry+university&rlz=1C1CHZN_enIN1162IN1162&oq=pondicherry+university&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIMCAEQIxgnGIAEGIoFMgwIAhAjGCcYgAQYigUyBwgDEAAYgAQyDQgEEC4YrwEYxwEYgAQyBggFEEUYPTIGCAYQRRg9MgYIBxBFGD3SAQg1NDc0ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" target="blank">Pondicherry University</a></h2>
-             <p><b>Master of Science in Computer Science </b>- 2026</p>
-            <h2><a style="text-decoration: none; color: rgb(3, 72, 44);" href="https://www.google.com/search?q=rkmvcc&oq=rkmvcc+&aqs=chrome.0.69i59j69i60.2016j0j4&sourceid=chrome&ie=UTF-8" target="blank">Ramakrishna Mission Vivekananda Centenary College, Rahara</a></h2>
-            <p><b>Bachelor of Science in Computer Science </b>- 2024</p>
-            <h2><a style="text-decoration: none; color: rgb(3, 72, 44);" href="https://www.google.com/search?q=rkmvp&oq=rkmvp+&aqs=chrome..69i57j69i60.2119j0j4&sourceid=chrome&ie=UTF-8" target="blank">Ramakrishna Mission Vidyapith, Purulia</a></h2>
-            <p><b>Higher Secondary</b> - 2021 | <b>Secondary</b> - 2019</p>
-        </div>
-    </section>
-    
-    <section id="experiences" class="section">
-        <div class="container">
-            <h1>Experiences</h1>
-            <div class="internship">
-                <h2 style="color:rgb(3, 72, 44)">Research Intern</h2>
-                <p><b>West Bengal State University</b></p>
-                <p>Duration: Sept 2022 - Feb 2023</p>
-                <p><i>Guide: Dr. Kaushik Roy</i></p>
-                <p>Worked on a team intending to create an Optical Character Recogniser for Bengali Language. As a part of the team that was assigned the task of developing a program that would segment each alphabet from a Bengali script dataset, I worked on Contour and Smoothing that would segment the alphabets and remove the noise. Working on this project I had the opportunity to learn different fundamentals of Image Processing and also develop my skills on OpenCV.</p>
-            </div>
-            <div class="internship">
-                <h2 style="color:rgb(3, 72, 44)">Research Intern</h2>
-                <p><b>Indian Institute of Engineering Science and Technology</b></p>
-                <p>Duration: June 2023 - December 2023</p>
-                <p><i>Guide: Dr. Asit Kumar Das</i></p>
-                <p>Worked on Automated Answer script evaluation techniques for Broad-answer type questions, using advanced transformer models like BART and neural-network based models like Doc2Vec. During the project we successfully created a synthetic question-answer database that could be used for further research on this topic.</p>
-            </div>
-            <div class="internship">
-                <h2 style="color:rgb(3, 72, 44)">Research Intern</h2>
-                <p><b>Ashoka University</b></p>
-                <p>Duration: February 2025 - Present</p>
-                <p><i>Guide: Dr. Anirban Sen</i></p>
-                <p>Working on Computational Media Analysis</p>
-            </div>
-        </div>
-    </section>
+<body>
 
-    <section id="resume" class="section">
-            <div class="container">
-                <h1>Resume</h1>
-                <p>You can download my resume by clicking the link below:</p>
-                <a href="Resume.pdf" target="_blank" class="resume-link">Download Resume</a>
+    <div class="container">
+        <!-- Name -->
+        <h1 class="main-title">Bitan Majumder</h1>
+
+        <!-- Top Section: Photo and About Me -->
+        <div class="top-section">
+            <div class="profile-photo">
+                <!-- REPLACE THIS SRC WITH YOUR ACTUAL IMAGE FILE -->
+                <img src="photo2.jpg" alt="Bitan Majumder">
             </div>
-        </section>
-    
-    <section id="resume" class="section">
-        <center>
+            
+            <div class="bio-content">
+                <h2>About Me</h2>
+                <p class="bio-text">
+                    I am a Doctoral student of Computer Science at <em>VSAC, Ashoka University</em>, working with <a href="https://www.ashoka.edu.in/profile/anirban-sen/">Dr. Anirban Sen</a>. Prior to joining the Department of Computer science at Ashoka, I was a Graduate student at <em>Pondicherry Central University</em>. I did my undergraduate studies at <em>Ramakrishna Mission Vivekananda Centenary College</em>. My research interest is in the field of Computational Social Science and Natural Language Processing. I did my schooling at <em>Ramakrishna Mission Vidyapith, Purulia</em>. My hobby is reading story books(short stories, historical fiction) and watching football matches(culé).
+                </p>
 
-            <div class="container">
-                <h1>Skills</h1>
-                
-                        <table style="text-align: center;">
-                                <tr style="text-align:center">
-                                <td><h3 style="color:rgb(3, 72, 44)">Programming:</h3></td>
-                                <td><p>C | Java | Python | HTML | SQL</p></td>
-                                </tr>
-                                <tr>
-                                <td><h3 style="color:rgb(3, 72, 44)">Frameworks:</h3></td>
-                                <td><p>PyTorch | TensorFlow</p></td>
-                                </tr>
-                                <tr>
-                                <td><h3 style="color:rgb(3, 72, 44)">Libraries:</h3></td>
-                                <td><p>OpenCV | Pillow | Keras</p></td>
-                                </tr>
-                                <tr>
-                                <td><h3 style="color:rgb(3, 72, 44)">Database:</h3></td>
-                                <td><p>MySQL</p></td>
-                                </tr>
-                        </table>
-
-                
-            </div>
-        </center>
-      </section>
-
-    <section id="certificates" class="section">
-            <div class="container">
-                <h1>Certificates</h1>
-                <div class="internship">
-                    
-                        <h3><a style="text-decoration: none; color: rgb(3, 72, 44); line-height: normal;" href="https://drive.google.com/drive/folders/1iRU9NjcndfxguzW-1g3eAziCeDS9PK-v?usp=drive_link" target="blank">Deep Learning Specialization</a></h3>
-                        <p><b>DeepLearning.ai</b></p>
-                        <p></p>
-                    
-                        <h3><a style="text-decoration: none; color: rgb(3, 72, 44); line-height: normal;" href="https://drive.google.com/file/d/1Bb861dxIfVtRPzswNvR4PvecPhBY_XKl/view?usp=sharing" target="blank">AWS Machine Learning Foundation</a></h3>
-                        <p><b>Udacity | AWS</b></p>
-                    
-                        <h3><a style="text-decoration: none; color: rgb(3, 72, 44); line-height: 0.4;" href="https://drive.google.com/file/d/1-qQqJgKgXAPchVKQJJ8Mz6JETAm-AcNi/view?usp=sharing" target="blank">Azure AI Fundamentals</a></h3>
-                        <p><b>Microsoft</b></p>
-                    
-                        <h3><a style="text-decoration: none; color: rgb(3, 72, 44); line-height: normal;" href="https://drive.google.com/file/d/1rjhb_mZNkj7QmQgpMfRzaXcAAcAKD8Rl/view?usp=sharing" target="_blank">Feature Engineering</a></h3>
-                        <p><b>Google Cloud</b></p>
-                    
+                <h2>Research Interest</h2>
+                <div class="research-interest">
+                    <p>Computational Social Science, Natural Language Processing, Social Network Analysis</p>
                 </div>
             </div>
-    </section>
+        </div>
 
-    <section id="assignments">
-        <center>
-            <div class="container">
-                <h1>Assignments</h1>
-                <p>Here are my Web Tech and Networking lab assignments:</p>
-                <ul>
-                    <a style="text-decoration: none; color: rgb(3, 72, 44);" href="webtech_assignment.html" target="_blank">Web Tech Assignment </a><br>
-                    <a style="text-decoration: none; color: rgb(3, 72, 44);" href="networking_assignment.html" target="_blank">Networking Assignment </a>
-                </ul>
+        <!-- Experience Section -->
+        <div class="section-block">
+            <h2>Experience</h2>
+            
+            <div class="entry">
+                <strong>Jan, 2026- April, 2026</strong> : Research Assistant at Ashoka University, Sonipat.
             </div>
-        </center>
-    </section>
+            
+            <div class="entry">
+                <strong>Jan, 2025 – Dec, 2025</strong> : Intern at Ashoka University, Sonipat.
+            </div>
+            
+            <div class="entry">
+                <strong>June, 2024 – Sept, 2024</strong> : Intern at IEEE Computer Society Student Branch Chapter of IIT Kharagpur. Worked on Time Series Modeling and Context-aware Generative AI.
+            </div>
+            
+            <div class="entry">
+                <strong>June, 2023 – Dec, 2023</strong> : Intern at Department of Computer Science and Technology, IIEST Shibpur, under the guidance of <em>Dr. Asit Kumar Das</em>. Worked on Natural Language Processing based answer script vectorization.
+            </div>
+            
+            <div class="entry">
+                <strong>Sept, 2022 – Feb, 2023</strong> : Intern at Department of Computer Science, West Bengal State University, under the guidance of <em>Dr. Kaushik Roy</em>. I was part of a team that developed an Automated Bangla character extraction technique from isolated data collection forms.
+            </div>
+        </div>
 
-    <section id="contact">
-        <center>
-            <div class="container">
-                <h1>Contact Me</h1>
-                <a href="mailto:bitanmajumder2002@gmail.com"><img src="logo\gmail.png" width="35" height="35"></a>
-                <a href="https://www.linkedin.com/in/bitan-majumder-672801237/"><img src="logo\linkedin.png" width="35" height="35"></a>
-                <a href="https://www.github.com/bitanM/"><img src="logo\github.png" width="30" height="30"></a>
+        <!-- Project Section -->
+        <div class="section-block">
+            <h2>Project</h2>
+            
+            <div class="project-item">
+                <h3>Code-mixed Sarcasm Detection of Large Language Models</h3>
+                <p>Large Language Models are capable of doing almost everything that we need in our day-to-day lives, yet they perform poorly when it comes to basic tasks such as sarcasm detection in code-mixed sentences. Comparatively a transformer-based language model such as DistilBERT performs quite well if it is fine-tuned on code-mixed sarcasm data in detection tasks.</p>
+            </div>
+            
+            <div class="project-item">
+                <h3>Automated Answer Script Evaluation</h3>
+                <p>Answer script evaluation is a very tedious job which is subject to various human biases. This project was aimed to develop an automated system based on NLP to predict score for answers to broad-answer-type questions.</p>
+            </div>
+        </div>
+
+        <!-- Footer / Social Icons -->
+        <div class="footer">
+            <a href="mailto:bitanmajumder2002@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/bitanM" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/bitan-majumder-672801237/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="resume.pdf" target="_blank" rel="noopener noreferrer" title="Resume"><i class="fas fa-file-pdf"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>
